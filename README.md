@@ -13,4 +13,5 @@ Cute, responsive, bootstrap/angular template with two sidebars.
 - Tested and works well on Chrome 46, Firefox 36 and Opera 36
 
 
-
+## DEMO
+[https://smikodanic.github.io/template-double-sidebars/](https://smikodanic.github.io/template-double-sidebars/)
