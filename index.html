@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Template - doubleSidebars</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="template.css">
+
+</head>
+
+<body ng-app="clientApp">
+
+
+<div id="wrapper" ng-controller="sidebarsCtrl" ng-class="[sideBar1, sideBar2]">
+
+	<!-- sidebars -->
+	<div id="page-sidebars" ng-style="pageSidebars">
+
+		<!-- Sidebar 1 -->
+    	<div id="sidebar1">
+    		<div class="sidebar-top">
+    			&nbsp;<button ng-click="toggleSidebar_1()"><i class="fa fa-angle-right"></i></button>
+    		</div>
+			<nav>
+				<ul>
+    			    <li><a href="#lnk1"><i class="fa fa-home"></i> <span>Home</span></a></li>
+    			    <li><a href="#lnk2"><i class="fa fa-line-chart"></i> <span>Data Presenttation</span></a></li>
+    			    <li><a href="#lnk3"><i class="fa fa-film"></i> <span>Upload video</span></a></li>
+    			</ul>
+			</nav>
+		</div>
+    	<!-- /Sidebar 1 -->
+
+    	<!-- Sidebar 2 -->
+    	<div id="sidebar2" ng-class="sidebar2push">
+    		<div class="sidebar-top">
+    			&nbsp;<button ng-click="toggleSidebar_2()"><i class="fa fa-angle-right"></i></button>
+    		</div>
+			<nav>
+				<ul>
+    			    <li><a href="#anch1"><i class="fa fa-edit"></i> <span>Edit Page</span></a></li>
+    			    <li><a href="#anch2"><i class="fa fa-bell"></i> <span>Notifications</span></a></li>
+    			    <li><a href="#anch3"><i class="fa fa-calendar"></i> <span>Scheduling</span></a></li>
+    			</ul>
+			</nav>
+		</div>
+    	<!-- /Sidebar 2 -->
+
+    	<!-- button when width < 480px -->
+    	<div id="sidebars-button" ng-style="sidebarsButton">
+    		<button ng-click="toggleSidebars()" title="toggle sidebars"><i class="fa fa-bars"></i></button>
+    	</div>
+
+
+	</div>
+	<!-- /sidebars -->
+
+
+
+
+
+
+
+	<!-- content -->
+	<div id="page-content" ng-style="pageContent">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-push-1 col-sm-10">
+					<h1>Heading</h1>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cumque nobis error facere maxime officia
+					doloremque illum odit, neque consectetur veritatis aperiam atque, aliquid ducimus explicabo, odio, ipsa in quod.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cumque nobis error facere maxime officia
+					doloremque illum odit, neque consectetur veritatis aperiam atque, aliquid ducimus explicabo, odio, ipsa in quod.
+					<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cumque nobis error facere maxime officia
+					doloremque illum odit, neque consectetur veritatis aperiam atque, aliquid ducimus explicabo, odio, ipsa in quod.
+
+					<br>
+					<br>
+					<br>
+					<p class="alert alert-warning" ng-cloak>
+						<small>SIDEBAR STATES</small>
+						<br><b>#sidebar1:</b> {{sideBar1}}
+						<br><b>#sidebar2:</b> {{sideBar2}} ({{sidebar2push}})
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- /content -->
+
+</div><!-- /div#wrapper -->
+
+
+	<!-- JS libs -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+
+	<!-- JS -->
+	<!-- <script src="jq.js"></script> -->
+	<script src="ng.js"></script>
+
+
+</body>
+</html>

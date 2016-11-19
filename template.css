@@ -1,0 +1,201 @@
+/* ******************** SIDEBAR 1 COLLAPSED, SIDEBAR 2 COLLAPSED ['','']********************** */
+body {
+	background-color: #fcfcfc;
+}
+
+/* sidebars */
+#page-sidebars {
+	display: block;
+	position: fixed;
+	height: 100%;
+	/*background-color: #f0f0f0;*/
+	background-color: #fcfcfc;
+	width: 100px;
+}
+
+/* content */
+#page-content {
+	display: block;
+	margin-left: 100px;
+	background-color: transparent;
+	/*border: 2px solid yellow;*/
+	min-height: 450px;
+	padding-top: 80px;
+	-webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+#page-content h1 {
+	color: Gray;
+	border-bottom: 2px dotted Gray;
+}
+
+/***** SIDEBAR 1 *****/
+#sidebar1 {
+	display: block;
+	position: fixed; /* this */
+	height: 100%; /* and this */
+	background-color: #1B2433;
+	color: #f0f0f0;
+	width: 50px;
+	z-index: 1000;
+	-webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidebar1 button {
+	float: right;
+	background-color: Gray;
+	color: #f0f0f0;
+	border: 1px solid #f0f0f0;
+}
+#sidebar1 button:hover {
+	background-color: Silver;
+}
+
+#sidebar1 > nav {
+	margin-top: 35px;
+}
+#sidebar1 > nav > ul {
+	list-style: none;
+}
+#sidebar1 > nav > ul > li {
+	line-height: 41px;
+	margin-left: -25px;
+}
+#sidebar1 > nav > ul > li > a {
+	color: #bbb;
+  font-size: 15px;
+  text-decoration: none;
+}
+#sidebar1 > nav > ul > li > a:hover {
+	color: #fff;
+}
+#sidebar1 > nav > ul > li > a > i {
+  font-size: 21px;
+}
+#sidebar1 > nav > ul > li > a > span {
+	display: none;
+	font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+  font-size: 15px;
+  margin-left: 8px;
+}
+
+
+
+/***** SIDEBAR 2 *****/
+#sidebar2 {
+	display: block;
+	position: fixed; /* this */
+	height: 100%; /* and this */
+	background-color: #3F4B5B;
+	/*background-color: transparent;*/
+	color: #f0f0f0;
+	width: 50px;
+	z-index: 1000;
+	-webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+	margin-left: 50px;
+}
+
+#sidebar2 button {
+	float: right;
+	background-color: Gray;
+	color: #f0f0f0;
+	border: 1px solid #f0f0f0;
+}
+#sidebar2 button:hover {
+	background-color: Silver;
+}
+
+#sidebar2 > nav {
+	margin-top: 35px;
+}
+#sidebar2 > nav > ul {
+	list-style: none;
+}
+#sidebar2 > nav > ul > li {
+	line-height: 41px;
+	margin-left: -25px;
+}
+#sidebar2 > nav > ul > li > a {
+	color: #bbb;
+  font-size: 15px;
+  text-decoration: none;
+}
+#sidebar2 > nav > ul > li > a:hover {
+	color: #fff;
+}
+#sidebar2 > nav > ul > li > a > i {
+  font-size: 21px;
+}
+#sidebar2 > nav > ul > li > a > span {
+	display: none;
+	font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+  font-size: 15px;
+  margin-left: 8px;
+}
+
+
+
+
+/* ******************** SIDEBAR 1 EXPANDED, SIDEBAR 2 COLLAPSED ['active1', '']********************** */
+#wrapper.active1 #page-sidebars {
+	width: 250px;
+}
+#wrapper.active1 #sidebar1 {
+	width: 200px;
+}
+#wrapper.active1 #page-content {
+	margin-left: 250px;
+}
+#wrapper.active1 #sidebar1 button {
+	-ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+#wrapper.active1 #sidebar1 > nav > ul > li > a > span { /* hide text when collapsed */
+	display: inline;
+}
+#wrapper.active1 #sidebar2.pushed {
+	margin-left: 200px;
+}
+
+
+/* ******************** SIDEBAR 1 COLLAPSED, SIDEBAR 2 EXPANDED ['', 'active2']********************** */
+#wrapper.active2 #page-sidebars {
+	width: 200px;
+}
+#wrapper.active2 #sidebar2 {
+	margin-left: 50px;
+	width: 150px;
+}
+#wrapper.active2 #page-content {
+	margin-left: 200px;
+}
+#wrapper.active2 #sidebar2 button {
+	-ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+#wrapper.active2 #sidebar2 > nav > ul > li > a > span { /* hide text when collapsed */
+	display: inline;
+}
+
+
+/* ******************** SIDEBAR 1 EXPANDED, SIDEBAR 2 EXPANDED ['active1', 'active2']********************** */
+#wrapper.active1.active2 #page-sidebars {
+	width: 350px;
+}
+#wrapper.active1.active2 #sidebar2 {
+	margin-left: 200px;
+	width: 150px;
+}
+#wrapper.active1.active2 #page-content {
+	margin-left: 350px;
+}
